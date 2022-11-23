@@ -1,0 +1,123 @@
+:root {
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Open sans-serif;
+  margin:0;
+  padding:0;
+}
+
+body {
+  color: var(--clr-gray);
+  margin: 10px 0px 0px 10px;
+  background:#dde1e7;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 19rem);
+  justify-content: center;
+}
+
+.container {
+  box-shadow: 0px 2px 110px 20px #2a89d8;
+  background-color: #dde1e7;
+  text-align: left;
+  position: relative;
+  margin: 2rem;
+  padding:20px;
+  border-radius :10px;
+  box-shadow: -5px -5px 9px rgb(255 255 255 / 45%), 5px 5px 9px rgb(94 104 121 / 30%);
+}
+
+.container1 {
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: #dde1e7;
+  text-align: left;
+  position: relative;
+  margin: 2rem;
+  padding:20px;
+  border-radius : 10px;
+  background-color :red;
+}
+
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align:left;
+  margin:2rem 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin:2rem 1rem;
+}
+
+.description1 {
+  font-size: 1.4rem;
+  margin: 2rem 1rem;
+  align-text:center;
+}
+
+.button {
+   transition-duration: 0.4s;
+   margin:0.1rem 7rem 0.1rem 1.1rem;
+   color: red;
+   width: 170px;
+   height: 35px;
+   border-radius: 10px;
+   border: bisque;
+   box-shadow: -5px -5px 9px rgb(255 255 255 / 45%), 5px 5px 9px rgb(94 104 121 / 30%);
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  cursor:pointer;
+  transition: transform .2s;
+  transform: scale(1.2);
+}
+
+.container:hover{
+	transition: transform .2s;
+    transform: scale(1.2);
+	background-color:#e9e4de;
+}
+
+.h{
+	margin-right: 50px;
+    cursor: pointer;
+	font-size:18px;
+	box-shadow: -5px -5px 9px rgb(255 255 255 / 45%), 5px 5px 9px rgb(94 104 121 / 30%);
+    width: 90;
+    height: 35;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.h:hover{
+	transition: transform .2s;
+    transform: scale(1.2);
+	background-color:#e9e4de;
+}
+.center{
+	box-shadow: -5px -5px 9px rgb(255 255 255 / 45%), 5px 5px 9px rgb(94 104 121 / 30%);
+	border-radius:50px;
+}
+a{
+	box-shadow: -5px -5px 9px rgb(255 255 255 / 45%), 5px 5px 9px rgb(94 104 121 / 30%);
+}
+.socials:hover{
+	transform:scale(1.2);
+}
+.footer-content:hover{
+	transform:scale(1.1);
+}
+/* Doremon */
+

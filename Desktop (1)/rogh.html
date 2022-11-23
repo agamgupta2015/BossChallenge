@@ -1,0 +1,86 @@
+<html>
+<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+</head>
+<body>
+	<script>
+		var a = prompt("Enter the number");
+		var arr = new Array(a);
+		for(var i=0;i<a;i++){
+			arr[i] = prompt("Enter number "+ (i+1))
+		}
+		for(var i=0;i<a;i++){
+			for(var j=0;j<a-1;j++){
+			if(arr[i]<arr[j]){
+				[arr[i],arr[j]] = [arr[j],arr[i]]
+			}
+		  }
+		}
+		for(var i=0;i<a;i++){
+			console.log(arr[i]);
+		}
+		
+	</script>
+	
+	<div id ="5">
+	<input type = "textbox">
+	</div>
+	
+	<script>
+	   function add(){
+	    var d = document.createElement("div");
+		var a = document.createElement("input");
+		var b = document.getElementById("5");
+		d.appendChild(a);
+		b.appendChild(d);
+	}
+	
+	</script>
+	
+
+	<button onClick="add()"> Add </button>
+	<br>
+	<br>
+	<label> Employee Name </label>
+	<input type="text" id="1"> <br>
+	<label> Employee ID </label>
+	<input type="text" id="2"> <br>
+	<label> Employee Designation </label>
+	<input type="text" id="3"> <br>
+	
+	<script>
+		function add1(){
+			var a = document.getElementById("1").value;
+			var b = document.getElementById("2").value;
+			var c = document.getElementById("3").value;
+			if(a.length == 0){
+				document.getElementById("1").style.background="yellow";
+			}
+			if(b.length == 0){
+				document.getElementById("2").style.background="yellow";
+			}
+			if(c.length == 0){
+				document.getElementById("3").style.background="yellow";
+			}
+			else if(a.length != 0 && b.length != 0 && c.length != 0){
+				alert("All Filled");
+			}
+		}
+		</script>
+		<div></div>
+	<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.getJSON("a.json", function(result){
+       // document.write(result);
+      $.each(result, function(i, field){
+           $("div").append(result + " ");
+      });
+    });
+  });
+});
+	</script>
+	
+</body>
+</html>

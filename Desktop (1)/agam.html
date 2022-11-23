@@ -1,0 +1,333 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script> 
+	
+  </script>
+  <style>
+		html {
+			scroll-behavior: smooth;
+		}
+		.html,body{
+			width:100%;
+			height:100%;
+		}
+		.general{
+			position:relative;
+			top:30%;
+			transform:translateY(-50%);
+			cursor:pointer;
+		}
+		.general:hover .two{
+			transform:rotate(-30deg) translateX(180px) scale(0.9);
+		}
+		.general:hover .three{
+			transform:rotate(30deg) translateX(-180px) scale(0.9);
+		}
+		.card{
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			color:white;
+			width:200px;
+			height:200px;
+			font-size:1.5em;
+			margin:auto;
+			border-radius:10px;
+			
+		}
+		.one{
+			background:#EE4266;
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:3;
+		}
+		.two{
+			background:#9d1acd;
+			position:absolute;
+			right:0;
+			z-index:2;
+			transform:rotate(-10deg) translate(8px,8px);
+		}
+		.three{
+			background:#3f9cff;
+			position:absolute;
+			left:0;
+			z-index:1;
+			transform:rotate(10deg) translate(-5px,7px);
+		}
+		.move{
+			transition:all .5s cubic-bezier(.5,.40,.10,1);
+		}
+		
+		.center{
+			  display: flex;
+			  text-align: center;
+			  justify-content: center;
+			  align-items: center;
+			}
+			.ring{
+			  position: absolute;
+			  width: 55px;
+			  height: 55px;
+			  border-radius: 50%;
+			  animation: ring 1s linear infinite;
+			}
+			@keyframes ring {
+			  0%{
+				transform: rotate(0deg);
+				box-shadow: 1px 5px 2px #e65c00;
+			  }
+			  50%{
+				transform: rotate(180deg);
+				box-shadow: 1px 5px 2px #18b201;
+			  }
+			  100%{
+				transform: rotate(360deg);
+				box-shadow: 1px 5px 2px #0456c8;
+			  }
+			}
+			.ring:before{
+			  position: absolute;
+			  content: '';
+			  left: 0;
+			  top: 0;
+			  height: 100%;
+			  width: 100%;
+			  border-radius: 50%;
+			  box-shadow: 0 0 5px rgba(255,255,255,.3);
+			}
+			span{
+			  color: #737373;
+			  font-size: 20px;
+			  text-transform: uppercase;
+			  letter-spacing: 1px;
+			  line-height: 200px;
+			  animation: text 3s ease-in-out infinite;
+			}
+			@keyframes text {
+			  50%{
+				color: black;
+			  }
+			}
+			
+			footer{
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: auto;
+				width: 100vw;
+				padding-top: 40px;
+			}
+			.footer-content{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+			}
+			.footer-content h3{
+				font-size: 2.1rem;
+				font-weight: 500;
+				text-transform: capitalize;
+				line-height: 3rem;
+			}
+			.footer-content p{
+				max-width: 500px;
+				margin: 10px auto;
+				line-height: 28px;
+				font-size: 14px;
+				color:black;
+			}
+			.socials{
+				list-style: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 1rem 0 3rem 0;
+			}
+			.socials li{
+				margin: 0 15px;
+			}
+			.socials a{
+				text-decoration: none;
+				color: #fff;
+				border: 1.1px solid #f93a04;
+				padding: 5px;
+				border-radius: 20%;
+
+			}
+			.socials a i{
+				font-size: 1.1rem;
+				width: 30px;
+				height:30px;
+				transition: color .4s ease;
+
+			}
+			.socials a:hover{
+				background: lightyellow;
+			}
+			
+			.socials a:hover i{
+				color: red;
+			}
+
+			.footer-bottom{
+				background: #000;
+				width: 100vw;
+				padding: 20px;
+			padding-bottom: 40px;
+				text-align: center;
+			}
+			.footer-bottom p{
+			float: left;
+				font-size: 14px;
+				word-spacing: 2px;
+				text-transform: capitalize;
+			}
+			.footer-bottom p a{
+			  color:#44bae8;
+			  font-size: 16px;
+			  text-decoration: none;
+			}
+			.footer-bottom span{
+				text-transform: uppercase;
+				opacity: .4;
+				font-weight: 200;
+			}
+			.footer-menu{
+			  float: right;
+
+			}
+			.footer-menu ul{
+			  display: flex;
+			}
+			.footer-menu ul li{
+				padding-right: 10px;
+				display: block;
+			}
+			.footer-menu ul li a{
+				  color: red;
+				  text-decoration: none;
+			}
+			.footer-menu ul li a:hover{
+				color: red;
+			}
+
+			@media (max-width:500px) {
+				.footer-menu ul{
+				  display: flex;
+				  margin-top: 10px;
+				  margin-bottom: 20px;
+				}
+			}
+</style>
+</head>
+
+<body>
+	<nav style="display: flex;justify-content: space-between;">
+	<div class="center">
+         <div class="ring"></div>
+          <img src = "image2386.jpg" style="width:50px; border-radius:50px">
+    </div>
+	
+	<p style="position: relative;right:25%;top: 19px;font-size: 35px;cursor:pointer;">
+		<b>Gadgets<b>
+	</p>
+		<div style="margin:20px">
+			<ul style="list-style: none;display: flex;">
+				<li class="h"> Home </a></li>
+				<li class="h"> About </li>
+				<li class="h"> Contact </li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="card general">
+		<div class="card one move">
+			To World
+		</div>
+		<div class="card three move">
+			Welcome
+		</div>
+		<div class="card two move">
+			of Gadgets 
+		</div>
+    </div>
+	
+  <div class="wrapper-grid" style=" margin-top: 10%;">
+    <div class="container">
+      <h1 algin="left" class="name">File Downloader</h1>
+      <p class="description">Paste url of image, video, or pdf to download.
+				This tool is made with vanilla javascript.  </p>
+	  <a href="File Downloader with JavaScript/index.html"><button class="button">Get Started</button></a>
+    </div>
+
+    <div class="container">
+      <h1 algin="left" class="name">Typing Speed</h1>
+      <p class="description">It is small typing text web-application which help the user to
+	  to test his/her typing speed by typing the particular paragraph.</p>
+	  <a href="Typing Speed Test Game in JavaScript/Typing Speed Test Game in JavaScript/index.html"><button class="button">Get Started</button></a>
+    </div>
+
+    <div class="container">
+      <h1 algin="left" class="name">QR-Code Scanner</h1>
+      <p class="description">It is web-application which creates the QR codes for any 
+	  website through pasting the link in the textbox.</p>
+	  <a href="QR Code Generator/index.html"><button class="button">Get Started</button></a>
+    </div>
+
+    <div class="container">
+      <h1 algin="left" class="name">Tic-Tac-Toe</h1>
+      <p class="description">JavaScript is the world's most popular programming language.
+	  It is the programming language of the Web.</p>
+	  <button class="button">Get Started</button>
+    </div>
+
+    <div class="container">
+      <p algin="left" class="name">Jumbled Words</p>
+      <p class="description">React is a JavaScript library for building user interfaces.
+		React is used to build single-page applications.</p>
+	  <button class="button">Get Started</button>
+    </div>
+
+    <div class="container">
+      <p text-algin="left" class="name">Word Guessing</p>
+      <p class="description">AngularJS is a very powerful JavaScript Framework. It is used in Single Page Application (SPA) projects.</p>
+	  <a href="Word Guessing Game/index.html"><button class="button">Get Started</button></a>
+    </div>
+	
+	<div class="container">
+      <h1 algin="left" class="name">Alarm Clock </h1>
+      <p class="description">HTML can embed programs written in a scripting
+	  language such as JavaScript, which affects the behavior and content of web pages.	  </p>
+	  <a href="Alarm Clock in JavaScript/index.html"><button class="button">Get Started</button></a>
+    </div>
+	
+	<div class="container">
+      <h1 algin="left" class="name">ChatBot </h1>
+      <p class="description">HTML can embed programs written in a scripting
+	  language such as JavaScript, which affects the behavior and content of web pages.	 </p>
+	  <a href="http://localhost/bot/bot.php"><button class="button">Get Started</button></a>
+    </div>
+  </div>
+	<footer>
+        <div class="footer-content">
+            <h3 class="footer-content">Contact Me</h3>
+            <p class="footer-content"> Name : Agam Gupta <br>
+			    Contact : 876922XXXX <br>
+				Address : Pitampura Mangolpuri</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+	</footer>
+
+</body>
+</html>
